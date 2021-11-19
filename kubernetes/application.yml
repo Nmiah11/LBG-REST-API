@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nummanapp
+  labels:
+    app: numman
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: numman
+  template:
+    metadata:
+      labels:
+        app: numman
+    spec:
+      containers:
+      - name: numman
+        image: gcr.io/lbg-training/numman_nodeapp:v16
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
