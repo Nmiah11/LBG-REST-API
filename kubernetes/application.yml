@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: numman
-        image: gcr.io/lbg-training/numman_nodeapp:v16
+        image: gcr.io/lbg-training/numman_nodeapp:16
         ports:
         - containerPort: 8080
           name: http
